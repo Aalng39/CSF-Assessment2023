@@ -1,0 +1,8 @@
+<h2>List of Restaurants</h2>
+
+<div *ngFor="let r of result" class="box"
+    [routerLink]="['/view3' , r.name]">
+    <h4>{{r.name}}</h4>
+</div>
+   
+<button type="button" [routerLink]="['/']" class="button">Back</button>

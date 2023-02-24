@@ -1,0 +1,46 @@
+<table>
+    <tr>
+        <td>Name: </td>
+        <td>{{rest.name}}</td>
+    </tr>
+    <tr>
+        <td>Cuisine: </td>
+        <td>{{rest.cuisine}}</td>
+    </tr>
+    <tr>
+        <td>Address: </td>
+        <td>{{rest.address}}</td>
+    </tr>
+</table>
+
+<img>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" size="30" formControlName="name"></td>
+        </tr>
+        <tr>
+            <td>Rating: </td>
+            <td>
+                <select formControlName="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><textarea rows="4" cols="30" formControlName="description" formControlName="comment"></textarea></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" [routerLink]="['/']">Back</button>
+                <button type="submit" [disabled]="form.invalid">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>

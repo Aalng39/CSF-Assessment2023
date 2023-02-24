@@ -1,0 +1,6 @@
+<h2>List of Cuisines</h2>
+
+<div *ngFor="let c of result" class="box"
+[routerLink]="['/view2' , c.cuisine]">
+  <h4>{{c.cuisine}}</h4>
+</div>
